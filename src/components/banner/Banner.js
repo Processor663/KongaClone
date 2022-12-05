@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import image from "../assets/NEXUSweb.jpg_r127hkfvs.webp";
-import imageMobile from "../assets/MobileTop.jpg_SknM2_a8i.jpg";
+import image from "../assets/banner.gif";
+// import imageMobile from "../assets/MobileTop.jpg_SknM2_a8i.jpg";
+import imageMobile from "../assets/banner.gif";
+
 
 const Container = styled.div`
   width: 100%;
@@ -31,15 +33,17 @@ const ImageDesk = styled.img`
   width: 100%;
   position: relative;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 const ImageSmall = styled.img`
   width: 100%;
+  height:2rem;
+  object-fit:cover;
   position: relative;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 769px) {
     display: none;
   }
 `;
@@ -51,7 +55,8 @@ const Banner = () => {
     <Container display={state}>
       <ImageDesk src={`${image}`} alt="image" />
       <ImageSmall src={`${imageMobile}`} alt="image" />
-
+   
+     
       <Button onClick={() => setState("true")}> &times; </Button>
     </Container>
   );

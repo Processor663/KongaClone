@@ -9,6 +9,10 @@ import SearchBar from "./SearchBar";
 const Container = styled.div`
   background-color: #ed017f;
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const ListMenu1 = styled.ul`
@@ -17,10 +21,12 @@ const ListMenu1 = styled.ul`
   flex-wrap: wrap;
   list-style: none;
   color: #ffffff;
+  margin-bottom: 0rem !important;
+  // padding-left: 0rem !important;
 `;
 
 const ListItem1 = styled.li`
-  padding: ${({ noPadding }) => (noPadding ? "0em" : "0.9375em 1.9em")};
+  padding: ${({ nopadding }) => (nopadding ? "0em" : "0.9375em 1.9em")};
   cursor: pointer;
   font-size: 13px;
 
@@ -51,21 +57,32 @@ const HelpContainer = styled.div`
 `;
 
 const CartDiv = styled.div`
+  height: 2.5rem;
   background-color: #33b27b;
-  padding: 0.2rem 1.5rem;
+  // padding: 0rem 1.5rem;
+  padding: 0.9375rem 1.25rem;
   border-radius: 3px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
+
+const CartPara = styled.div`
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+`;
+
+
+
 const SpanCart = styled.span`
+  background-color: #fff;
+  border-radius: 0.125rem;
   color: #000;
-  border-radius: 3px;
-  margin-left: 1.9rem;
-  background-color: #f6f6f6;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
   padding: 0.1875rem 0.375rem;
-  font-weight: bold;
 `;
 
 const ListMenu2 = styled.ul`
@@ -76,11 +93,13 @@ const ListMenu2 = styled.ul`
   color: #fff;
   cursor: pointer;
   font-size: 0.8125rem;
+  margin-bottom: 0rem !important;
+  padding-left: 0rem !important;
 `;
 
 const ListItem2 = styled.li`
   color: #fcf9fb;
-  text-align:center;
+  text-align: center;
   font-weight: ${({ bold }) => (bold ? "bold" : "")};
   padding: 0.75rem 0.9375rem;
   &:hover {
@@ -90,21 +109,13 @@ const ListItem2 = styled.li`
 `;
 
 const CateSpan = styled.span`
-  vertical-align: middle;
   margin-left: 0.2rem;
 `;
-
-
-
 
 const Image1 = styled.img`
   max-height: 2.1875rem;
   width: auto;
 `;
-
-
-
-
 
 const NavContainer = () => {
   return (
@@ -121,7 +132,7 @@ const NavContainer = () => {
             Sell on <br />
             Konga
           </ListItem1>
-          <ListItem1 transparent noPadding>
+          <ListItem1 transparent nopadding>
             <SearchBar />
           </ListItem1>
           <ListItem1>
@@ -138,11 +149,11 @@ const NavContainer = () => {
           </ListItem1>
           <ListItem1 transparent>
             <CartDiv>
-              <BsCart3 size="1.3rem" />
-              <p style={{ marginLeft: "0.3rem" }}>
+              <BsCart3 size="1rem" />
+              <CartPara>
                 My <br />
                 Cart
-              </p>
+              </CartPara>
               <SpanCart>0</SpanCart>
             </CartDiv>
           </ListItem1>
@@ -151,7 +162,7 @@ const NavContainer = () => {
           <ListItem2 bold>
             All Categories
             <CateSpan>
-              <FaBars />
+              <FaBars size="1.0rem" />
             </CateSpan>
           </ListItem2>
           <ListItem2>Computers and Accessories</ListItem2>

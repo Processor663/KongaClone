@@ -15,6 +15,11 @@ const Container = styled.div`
   flex-wrap: wrap;
   align-items: center;
   background-color: #f6f6f6;
+  // display: none;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Image = styled.img`
