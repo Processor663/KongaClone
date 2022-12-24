@@ -14,7 +14,7 @@ import SearchBar from "./SearchBar";
 import SideDrawer from "./sideDrawer/SideDrawer";
 
 const Container = styled.div`
-
+  background-color: #ffffff;
   @media screen and (min-width: 769px) {
     display: none;
   }
@@ -23,7 +23,7 @@ const Container = styled.div`
 const DivOne = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 0.5rem 0rem 1rem 0rem;
+  padding: 0.5rem 0rem 0rem 0rem;
 `;
 
 const SubDIVOne = styled.div`
@@ -60,7 +60,6 @@ const SubDIVThree = styled.div`
 `;
 
 const Para3 = styled.p`
-  // text-align:center;
   font-size: 0.7rem;
   color: #50545b;
 `;

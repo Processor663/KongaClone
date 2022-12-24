@@ -21,7 +21,7 @@ import { BsStar } from "react-icons/bs";
 
 const SideDrawer = () => {
   return (
-    <div>
+    <div style={{backgroundColor:"#ffff"}}>
       <ButtonContainer>
         <Button>Login</Button>
         <Button>Sign Up</Button>

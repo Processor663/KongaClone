@@ -5,26 +5,30 @@ import Banner from "./components/banner/Banner";
 import Banner2 from "./components/banner/Banner2";
 import NavContainer from "./components/navContainer/NavContainer";
 import HeroSection from "./components/heroSection/HeroSection";
+import TodayDealContainer from "./components/todayDeal/TodayDealContainer";
+import FooterContainer from "./components/footer/FooterContainer";
+import FixedDownNav from "./components/FixedDownNav/FixedDownNav";
 
 
 const App = () => {
   return (
     <div>
       <GlobalStyle />
-      <header>
-        <Banner />
-        <Banner2 />
-        <NavContainer />
+      <Banner />
+      <Banner2 />
+      <header style={{ position: "sticky", top: 0, zIndex: 999999999 }}>
+        <nav>
+          <NavContainer />
+        </nav>
       </header>
       <main>
         <HeroSection />
-        <div>jfhfhfhfhfhf
-          jhhfhhffjf
-          djdhdhffhfhff
-          jvjhfhfjfnshdjkdkd
-          nvnvnvnv
-        </div>
+        <TodayDealContainer />
       </main>
+      <footer>
+        <FooterContainer />
+      </footer>
+      <FixedDownNav />
     </div>
   );
 };

@@ -27,8 +27,12 @@ const SubContainer = styled.div`
 
 const SubDivider = styled.div`
   display: flex;
-  justify-content:space-evenly;
-  margin-top: 1rem;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+  @media screen and (max-width: 998px) {
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+  }
 `;
 
 const Img = styled.img`
