@@ -26,7 +26,7 @@ const Container = styled.div`
   z-index: 9999;
 
   @media screen and (max-width: 768px) {
-    top: 55%;
+    // top: 65%;
     padding-right: 1.5rem;
   }
 `;
@@ -58,9 +58,8 @@ const Round = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  // width: 1.575rem;
-  // height: 1.375rem;
+  width: 4.575rem;
+  height: 4.375rem;
   background-color: #ffffff;
   border-radius: 50%;
   box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.38);

@@ -13,12 +13,28 @@ const CardTitle = styled.div`
 `;
 
 const ExtraStyle = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex !important;
 
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  -webkit-box-orient: vertical; /*ie10*/
+  flex-direction: column !important;
+
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  -webkit-box-pack: space-around;
+  justify-content: space-around !important;
+  
+  width: 100%;
+  height: 100%;
 `;
 
 const Small = styled.div`
