@@ -30,9 +30,26 @@ const Header = styled.h2`
   background-image: url(${bgImage});
   background-repeat: no-repeat;
   background-size: cover;
-  color: #ffffff;
+  margin-right: 3rem;
+  font-weight: bold;
+
+  @media screen and (max-width: 768px) {
+    margin-right: auto;
+    font-size: 1.5rem;
+  }
 `;
+
+const SmallHeader = styled.small`
+ &:hover {
+  cursor: pointer;
+  text-decoration: underline;
+
+ }
+`;
+
 const HeaderContainer = styled.div`
+  display: flex;
+  color: #ffffff;
   background-color: #94004f;
   padding: 0.5rem 0.9rem;
   border-radius: 8px 8px 0px 0px;
@@ -50,7 +67,6 @@ const Cards = styled.div`
   gap: 1rem;
   padding: 1rem;
   cursor: pointer;
-  grid-auto-row: 100px;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: repeat(6, 1fr);
@@ -60,10 +76,13 @@ const Cards = styled.div`
 
 const TodayDeals = () => {
   const Products = Data.map((product, index) => {
-      return(
-
-        <Card key={index} data={product}/>
-      )
+      return (
+        <Card
+          key={index}
+          data={product}
+         
+        />
+      );
   })
 
   return (
@@ -71,10 +90,11 @@ const TodayDeals = () => {
       <Container>
         <HeaderContainer>
           <Header>Today's Deals</Header>
+          <SmallHeader>See All Items</SmallHeader>
         </HeaderContainer>
         <Overflow>
           <Cards>
-            {Products }
+            {Products}
           </Cards>
         </Overflow>
       </Container>

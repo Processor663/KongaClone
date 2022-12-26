@@ -28,7 +28,7 @@ const Container = styled.div`
 
 function Caro() {
   return (
-    <Container>
+    <Container >
       <Carousel fade interval={2300}>
         <Carousel.Item>
           <img className="d-block w-100" src={image1} alt="First slide" />

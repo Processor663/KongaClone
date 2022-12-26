@@ -14,6 +14,7 @@ export const Data = [
     currentPrice: "9,400",
     oldPrice: "11,170",
     save: " 1,770",
+    off: "60%",
   },
 
   {
@@ -22,14 +23,16 @@ export const Data = [
     currentPrice: "151,800",
     oldPrice: " 167,380",
     save: "15,580",
+    off: "14%",
   },
 
   {
     image: image3,
-    desc:"Johnnie Walker Black Label - 700c...",
+    desc: "Johnnie Walker Black Label - 700c...",
     currentPrice: "11,213",
     oldPrice: "13,560",
     save: "2,347",
+    off: "10%",
   },
 
   {
@@ -38,6 +41,7 @@ export const Data = [
     currentPrice: "345,000",
     oldPrice: "397,000",
     save: "52,040",
+    off: "5%",
   },
 
   {
@@ -46,6 +50,7 @@ export const Data = [
     currentPrice: "162,760",
     oldPrice: "189,830",
     save: "27,070",
+    off: "50%",
   },
 
   {
@@ -54,6 +59,7 @@ export const Data = [
     currentPrice: "15,366",
     oldPrice: "17,000",
     save: "2,234",
+    off: "70%",
   },
 ];
 

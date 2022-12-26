@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import {
   TbBuildingStore,
@@ -39,6 +39,7 @@ const SubDIVOneCon = styled.div`
 const DivTwo = styled.div`
   margin: 1rem 0rem 1rem 0rem;
   display: ${({ display }) => (display === "true" ? "none" : "")};
+  padding-bottom: ${({ hide }) => (hide ? "1rem" : "0rem")};
 `;
 
 const DivThree = styled.div`
@@ -72,10 +73,36 @@ const Image = styled.img`
   width: 5.3125rem;
 `;
 
+const HideOnScroll = styled.div`
+  display: ${({ hide }) => hide ? "none": "block" };
+`;
+
+
+
+
+
 
 
 const NavBarMobile = () => {
-  const [Button, setButton] = useState(false)
+  const [hideListBar, setHideListBar] = useState(false);
+
+
+  const HideListBar = () => {
+    if (window.scrollY >= 80.5) {
+      setHideListBar(true);
+    } else {
+      setHideListBar(false);
+    }
+  };
+
+  useEffect(()=> {
+      window.addEventListener('scroll', HideListBar);
+
+    },[])
+
+
+
+  const [Button, setButton] = useState(false);
   return (
     <>
       <Container>
@@ -105,7 +132,7 @@ const NavBarMobile = () => {
             </SubDIVOneCon>
           </SubDIVOne>
         </DivOne>
-        <DivTwo display={Button.toString()}>
+        <DivTwo display={Button.toString()} hide={hideListBar}>
           <SearchBar
             bg={"#f2f2f2"}
             center={"center"}
@@ -113,28 +140,30 @@ const NavBarMobile = () => {
             fontsize={"0.75rem"}
           />
         </DivTwo>
-        <DivThree display={Button.toString()}>
-          <SubDIVThree>
-            <TbDotsCircleHorizontal size={"1.4rem"} />
-            <Para3>Browser All</Para3>
-          </SubDIVThree>
-          <SubDIVThree>
-            <TbShirt size={"1.4rem"} />
-            <Para3>Fashion</Para3>
-          </SubDIVThree>
-          <SubDIVThree>
-            <BiMessageEdit size={"1.4rem"} />
-            <Para3>Computers</Para3>
-          </SubDIVThree>
-          <SubDIVThree>
-            <BsPhone size={"1.4rem"} />
-            <Para3>Phones</Para3>
-          </SubDIVThree>
-          <SubDIVThree>
-            <BsReplyAll size={"1.4rem"} />
-            <Para3>All Deals</Para3>
-          </SubDIVThree>
-        </DivThree>
+        <HideOnScroll hide={hideListBar}>
+          <DivThree display={Button.toString()}>
+            <SubDIVThree>
+              <TbDotsCircleHorizontal size={"1.4rem"} />
+              <Para3>Browser All</Para3>
+            </SubDIVThree>
+            <SubDIVThree>
+              <TbShirt size={"1.4rem"} />
+              <Para3>Fashion</Para3>
+            </SubDIVThree>
+            <SubDIVThree>
+              <BiMessageEdit size={"1.4rem"} />
+              <Para3>Computers</Para3>
+            </SubDIVThree>
+            <SubDIVThree>
+              <BsPhone size={"1.4rem"} />
+              <Para3>Phones</Para3>
+            </SubDIVThree>
+            <SubDIVThree>
+              <BsReplyAll size={"1.4rem"} />
+              <Para3>All Deals</Para3>
+            </SubDIVThree>
+          </DivThree>
+        </HideOnScroll>
       </Container>
       {Button && <SideDrawer />}
     </>

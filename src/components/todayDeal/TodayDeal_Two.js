@@ -57,7 +57,7 @@ const Image = styled.img`
 const TodayDeal_Two = () => {
   const Items = Images.map((Item, index) => {
     return (
-        <SubContainer>
+        <SubContainer key={index}>
           <ImageContainer>
             <Image src={Item.image} alt="image" />
           </ImageContainer>

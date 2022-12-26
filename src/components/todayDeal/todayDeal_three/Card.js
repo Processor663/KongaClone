@@ -12,8 +12,25 @@ const CardTitle = styled.div`
   }
 `;
 
+const ExtraStyle = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+
+`;
+
+const Small = styled.div`
+    font-size: 0.8125rem;
+    color: #a9054d;
+    font-weight: 500;
+    cursor: pointer;
+
+`;
 
 
+               
 
 function CardTwo({item}) {
   return (
@@ -21,31 +38,16 @@ function CardTwo({item}) {
       <Card style={{ width: "100%", height: "100%" }}>
         <Card.Img variant="top" src={item.Image} />
         <Card.Body>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-around",
-              width: "100%",
-              height: "100%",
-            }}
-          >
+          <ExtraStyle>
             <Card.Title>
               <CardTitle>{item.desc}</CardTitle>
             </Card.Title>
             <Card.Text style={{ fontSize: "0.9rem" }}>{item.content}</Card.Text>
-            <small
-              style={{
-                fontSize: "0.8125rem",
-                color: "#a9054d",
-                fontWeight: "500",
-                cursor: "pointer",
-              }}
-            >
+            <Small>
               {item.shop}
               <RiArrowDropRightLine size="1.5rem" />
-            </small>
-          </div>
+            </Small>
+          </ExtraStyle>
         </Card.Body>
       </Card>
     </>
