@@ -27,9 +27,6 @@ const Container = styled.div`
 `;
 
 const Header = styled.h2`
-  background-image: url(${bgImage});
-  background-repeat: no-repeat;
-  background-size: cover;
   margin-right: 3rem;
   font-weight: bold;
 
@@ -53,6 +50,9 @@ const HeaderContainer = styled.div`
   background-color: #94004f;
   padding: 0.5rem 0.9rem;
   border-radius: 8px 8px 0px 0px;
+  background-image: url(${bgImage});
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 const Overflow = styled.div`

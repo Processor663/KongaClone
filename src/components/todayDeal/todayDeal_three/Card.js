@@ -45,8 +45,7 @@ const Small = styled.div`
 
 `;
 
-
-               
+          
 
 function CardTwo({item}) {
   return (
