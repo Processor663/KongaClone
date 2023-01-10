@@ -1,2 +1,2 @@
-# KongaClone
-Kong Clone Site 
+# Konga Clone
+Konga Clone Site 
